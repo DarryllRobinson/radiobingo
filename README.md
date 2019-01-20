@@ -1,4 +1,4 @@
-# Radio Bingo - Prod 1
+# Radio Bingo
 This is the production environment for the Radio Bingo app. All code here is subject to the whims of the Universe and could well explode. Proceed with caution - here be dragons!
 
 ## Author
