@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "../node_modules/jquery/dist/jquery.min.js";
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
+import { Button } from 'react-bootstrap';
 import './App.css';
 
 class App extends Component {
@@ -48,14 +49,14 @@ class App extends Component {
                 <div  className="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul  className="navbar-nav mr-auto">
                     <li  className="nav-item active">
-                      <a  className="nav-link"
+                      <Button
                         onClick={this.logout.bind(this)}
                         style={{ cursor: "pointer" }}
                       >
                         Log Out
                       <span  className="sr-only">
                       </span>
-                      </a>
+                      </Button>
                     </li>
                   </ul>
                 </div>
