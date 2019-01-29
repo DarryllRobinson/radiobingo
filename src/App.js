@@ -26,41 +26,30 @@ class App extends Component {
 
           {
             !isAuthenticated() && (
-              <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div  className="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul  className="navbar-nav mr-auto">
-                    <li  className="nav-item active">
-                      <a  className="nav-link"
+
+                      <Button
                         onClick={this.login.bind(this)}
                         style={{ cursor: "pointer" }}
                       >
                         Log In
-                      <span  className="sr-only">
-                      </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+
+                      </Button>
           )}
           {
             isAuthenticated() && (
-              <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div  className="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul  className="navbar-nav mr-auto">
-                    <li  className="nav-item active">
+
+
                       <Button
                         onClick={this.logout.bind(this)}
-                        style={{ cursor: "pointer" }}
+
                       >
                         Log Out
-                      <span  className="sr-only">
-                      </span>
+
                       </Button>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+
+
+
+
           )}
 
         </header>
