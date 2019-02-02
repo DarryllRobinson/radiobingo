@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "../node_modules/jquery/dist/jquery.min.js";
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import { Button } from 'react-bootstrap';
+import Menu from './Menu/menu';
 import './App.css';
 
 class App extends Component {
@@ -20,13 +21,14 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p>
-            Welcome to Radio Bingo!
-          </p>
+
 
           {
             !isAuthenticated() && (
-
+              <div>
+              <p>
+                Welcome to Radio Bingo!
+              </p>
                       <Button
                         onClick={this.login.bind(this)}
                         style={{ cursor: "pointer" }}
@@ -34,23 +36,14 @@ class App extends Component {
                         Log In
 
                       </Button>
+              </div>
           )}
           {
             isAuthenticated() && (
-
-
-                      <Button
-                        onClick={this.logout.bind(this)}
-
-                      >
-                        Log Out
-
-                      </Button>
-
-
-
-
-          )}
+              <div>
+                <Menu />
+              </div>
+            )}
 
         </header>
       </div>
