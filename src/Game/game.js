@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 
 class Game extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      tiles: 0
+    };
+  }
+
   render() {
     const { isAuthenticated } = this.props.auth;
 
     if (!this.state.tiles && isAuthenticated) {
       return (
         <div className="Game">
-          Please wait a moment as we build your card...
+          Please wait a moment as we build your game...
         </div>
       )
     }

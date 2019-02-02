@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
+//import Auth from '../Auth/Auth';
+
+//const auth = new Auth();
 
 class Menu extends Component {
   goTo(route) {
@@ -15,6 +18,8 @@ class Menu extends Component {
   }
 
   render() {
+    //const { isAuthenticated } = this.props.auth;
+
 
     return (
       <div>
