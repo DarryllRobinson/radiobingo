@@ -3,9 +3,16 @@ import "../node_modules/jquery/dist/jquery.min.js";
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import { Button } from 'react-bootstrap';
 import Menu from './Menu/menu';
+import Auth from './Auth/Auth';
 import './App.css';
 
+const auth = new Auth();
+
 class App extends Component {
+
+  goTo(route) {
+    this.props.history.replace(`/${route}`);
+  }
 
   login() {
     this.props.auth.login();
@@ -41,7 +48,13 @@ class App extends Component {
           {
             isAuthenticated() && (
               <div>
-                <Menu />
+                <Menu auth={auth} />
+                <Button
+                  onClick={this.goTo.bind(this, 'profile')}
+                  style={{ cursor: "pointer" }}
+                >
+                  Profile
+                </Button>
               </div>
             )}
 

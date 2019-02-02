@@ -4,9 +4,9 @@ import App from './App';
 //import Home from './Home/Home';
 
 //import Landing from './components/Landing';
-//import Card from './components/Card';
+import Game from './Game/game';
 //import Test from './components/Test';
-//import Profile from './Auth/Profile';
+import Profile from './Auth/Profile';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
@@ -25,6 +25,8 @@ export const makeMainRoutes = () => {
       <Router history={history}>
         <div>
           <Route path="/" render={(props) => <App auth={auth} {...props} />} />
+          <Route path="/profile" render={(props) => <Profile auth={auth} {...props} />} />
+          <Route path="/game" render={(props) => <Game auth={auth} {...props} />} />
           <Route path="/callback" render={(props) => {
             handleAuthentication(props);
             return <Callback {...props} />
