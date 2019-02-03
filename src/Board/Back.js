@@ -7,7 +7,8 @@ class Back extends Component {
     return this.props.back.map((element, index) => {
       return (
         <div key={index}>
-          <Button bsSize="large"
+          <Button
+            bsSize="large"
             block
           >
             {element}

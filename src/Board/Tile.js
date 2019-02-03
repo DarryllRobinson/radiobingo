@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { FlexyFlipCard } from 'flexy-flipcards';
 import Back from './Back';
 import Front from './Front';
+import './style.css';
 //import { Button } from 'react-bootstrap';
 
 class Tile extends Component {
   render() {
 
     return (
-      <div>
+      <div className="tile">
         <FlexyFlipCard
           frontBackgroundColor="#000"
           backBackgroundColor="#d8410a"
@@ -17,16 +18,12 @@ class Tile extends Component {
             <Front front={this.props.front} />
           </div>
 
-          <div ref="flipper"
-            style={{alignItems: "center"}}
-          >
-            <div className="RadioGroup"
-              style={{fontSize: 13, color: "white", textAlign: "left", padding: 3}}
-            >
+          <div ref="flipper">
+            {/*<div className="RadioGroup">*/}
               <Back back={this.props.back}
                 numBack={this.props.numBack}
               />
-            </div>
+            {/*</div>*/}
           </div>
         </FlexyFlipCard>
       </div>

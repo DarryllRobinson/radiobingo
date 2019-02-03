@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './front.css';
+import './style.css';
 
 class Front extends Component {
   render() {

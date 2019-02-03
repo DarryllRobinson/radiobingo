@@ -1,0 +1,66 @@
+.front {
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 120px;
+  min-height: 100px;
+  border: 2px solid #2f2f2f;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  word-break: break-word;
+  font-size: 1.125rem;
+  transition: .25s;
+  padding: 2px;
+  background-color: #000034;
+  color: white;
+  justify-content: center;
+}
+
+.fronts{
+  margin: 46;
+  fontSize: 26;
+  color: white;
+  text-align: center;
+}
+
+.RadioGroup {
+  font-size: 13;
+  color: white;
+  text-align: left;
+  padding: 3px;
+}
+
+#flipper {
+  align-items: center;
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.tile {
+  border: green;
+}
+
+.items {
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 120px;
+  min-height: 157px;
+  border: 2px solid #2f2f2f;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  word-break: break-word;
+  font-size: 1.125rem;
+  transition: .25s;
+  padding: 2px;
+  background-color: #000034;
+}

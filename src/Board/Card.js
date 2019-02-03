@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Tile from './Tile';
+import './style.css';
 
 class Card extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      front: "song",
+      front: "really long song name",
       back: [
         "Michael Jackson",
         "Blur",
