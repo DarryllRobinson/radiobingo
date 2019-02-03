@@ -8,24 +8,27 @@ class Card extends Component {
     this.state = {
       front: "song",
       back: [
-        "artist_1",
-        "artist_2",
-        "artist_3"
+        "Michael Jackson",
+        "Blur",
+        "Mickey Mouse"
       ],
       numBack: 3
     };
   }
 
   render() {
+    const { isAuthenticated } = this.props.auth;
 
     return (
       <div>
-        <div className="item-list">
-          <Tile front={this.state.front}
-            back={this.state.back}
-            numBack={this.state.numBack}
-          />
-        </div>
+        {isAuthenticated() && (
+          <div className="item-list">
+            <Tile front={this.state.front}
+              back={this.state.back}
+              numBack={this.state.numBack}
+            />
+          </div>
+        )}
       </div>
     )
   }

@@ -4,7 +4,7 @@ import Back from './Back';
 import Front from './Front';
 //import { Button } from 'react-bootstrap';
 
-class Tile extends Component {    //***** renders a tile, front and back
+class Tile extends Component {
   render() {
 
     return (
@@ -14,10 +14,16 @@ class Tile extends Component {    //***** renders a tile, front and back
             <Front front={this.props.front}/>
           </div>
 
-          <div ref="flipper">
-            <Back back={this.props.back}
-              numBack={this.props.numBack}
-            />
+          <div ref="flipper"
+            style={{alignItems: "center"}}
+          >
+            <div className="RadioGroup"
+              style={{fontSize: 13, color: "white", textAlign: "left", padding: 3}}
+            >
+              <Back back={this.props.back}
+                numBack={this.props.numBack}
+              />
+            </div>
           </div>
         </FlexyFlipCard>
       </div>
