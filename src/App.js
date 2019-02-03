@@ -77,7 +77,7 @@ class App extends Component {
                   </Button>
 
                   <Button
-                    onClick={this.goTo.bind(this, 'game')}
+                    onClick={this.goTo.bind(this, 'card')}
                     style={{ cursor: "pointer" }}
                   >
                     Current game
