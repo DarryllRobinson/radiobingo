@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './front.css';
 
 class Front extends Component {
   render() {
     return (
-      <div>
+      <div className="front">
         {this.props.front}
       </div>
     )

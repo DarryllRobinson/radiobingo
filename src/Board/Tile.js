@@ -9,9 +9,12 @@ class Tile extends Component {
 
     return (
       <div>
-        <FlexyFlipCard>
+        <FlexyFlipCard
+          frontBackgroundColor="#000"
+          backBackgroundColor="#d8410a"
+        >
           <div ref="flipper">
-            <Front front={this.props.front}/>
+            <Front front={this.props.front} />
           </div>
 
           <div ref="flipper"
