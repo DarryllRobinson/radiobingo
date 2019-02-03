@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 import { FlexyFlipCard } from 'flexy-flipcards';
+import Back from './Back';
+import Front from './Front';
+//import { Button } from 'react-bootstrap';
 
-class Tile extends Component {
-  render() {    //***** renders a card, front and back
+class Tile extends Component {    //***** renders a tile, front and back
+  render() {
+
     return (
-      <div
-        className="item"
-        key={1}
-      >
+      <div>
         <FlexyFlipCard>
-
           <div ref="flipper">
-            FRONT
+            <Front front={this.props.front}/>
           </div>
 
           <div ref="flipper">
-            BACK
+            <Back back={this.props.back}
+              numBack={this.props.numBack}
+            />
           </div>
-
         </FlexyFlipCard>
       </div>
     )
