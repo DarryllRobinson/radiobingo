@@ -9,27 +9,50 @@ class Card extends Component {
     this.state = {
       front: "really long song name",
       back: [
-        "Michael Jackson",
-        "Blur",
-        "Mickey Mouse"
+        "artist_1",
+        "artist_2",
+        "artist_3"
       ],
-      numBack: 3
+      numTiles: 15,
+      tiles: []
     };
+  }
+
+  componentDidMount() {
+    this.createTile();
+  }
+
+  createTile() {
+    const tile = [];
+    for (let i = 0; i < this.state.numTiles; i++) {
+      tile.push(i);
+    };
+    this.setState({ tiles: tile });
+  }
+
+  renderCard() {
+      return (
+        <Tile tiles={this.state.tiles}
+          front={this.state.front}
+          back={this.state.back}
+        />
+      )
   }
 
   render() {
     const { isAuthenticated } = this.props.auth;
 
     return (
-      <div>
-        {isAuthenticated() && (
-          <div className="item-list">
-            <Tile front={this.state.front}
-              back={this.state.back}
-              numBack={this.state.numBack}
-            />
-          </div>
-        )}
+      <div className="Card">
+        <div>
+          {
+            isAuthenticated() && (
+              <div className="tile-list">
+                {this.renderCard()}
+              </div>
+            )
+          }
+        </div>
       </div>
     )
   }

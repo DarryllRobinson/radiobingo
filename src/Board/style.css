@@ -1,53 +1,50 @@
-.front {
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  width: 120px;
-  min-height: 100px;
-  border: 2px solid #2f2f2f;
-  margin-left: .5rem;
-  margin-right: .5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  word-break: break-word;
-  font-size: 1.125rem;
-  transition: .25s;
-  padding: 2px;
-  background-color: #000034;
-  color: white;
-  justify-content: center;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.fronts{
-  margin: 46;
-  fontSize: 26;
-  color: white;
-  text-align: center;
+html {
+  font-size: 16px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  color: #fff;
 }
 
-.RadioGroup {
-  font-size: 13;
-  color: white;
-  text-align: left;
-  padding: 3px;
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
-#flipper {
-  align-items: center;
-}
-
-.item-list {
+.Card {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 2rem;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  background-color: #f3f3f3;
+}
+
+.front {
+  margin: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: white;
+}
+
+.back {
+  margin: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: red;
 }
 
 .tile {
-  border: green;
-}
-
-.items {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -63,4 +60,11 @@
   transition: .25s;
   padding: 2px;
   background-color: #000034;
+}
+
+.tile-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 2rem;
 }
